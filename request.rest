@@ -1,1 +1,31 @@
-GET http://localhost:3003/teste
+
+GET http://localhost:3003/users
+content-type: application/json
+
+###
+
+POST http://localhost:3003/users
+content-type: application/json
+
+{
+    "name": "Thiago Fernandes",
+    "email": "thi.darkedroom@gmail.com",
+    "password": "123456",
+    "passwordConfirm" : "12345"
+}
+
+###
+
+POST http://localhost:3003/products
+content-type: application/json
+
+{
+    "name": "Livro: Pente de Vênus",
+    "price": 29.90,
+    "image" : "https://m.media-amazon.com/images/I/41BO8K068aL._SY344_BO1,204,203,200_QL70_ML2_.jpg"
+}
+
+###
+
+GET http://localhost:3003/products
+content-type: application/json

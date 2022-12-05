@@ -15,7 +15,7 @@ const createTableProducts = () => connection.raw(`
     CREATE TABLE IF NOT EXISTS labecommerce_products (
         id VARCHAR(255) PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
-        price DECIMAL NOT NULL,
+        price FLOAT NOT NULL,
         image_url VARCHAR(255) NOT NULL
     )
 `)

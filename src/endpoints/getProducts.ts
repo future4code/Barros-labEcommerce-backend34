@@ -11,6 +11,10 @@ export async function getProducts (req: Request, res: Response) {
       if (!nameSearch) {
         nameSearch = "%"
       }
+      if (order !== "asc" && order !== "desc" && order !== "ASC" && order !== "DESC") {
+        statusCode = 404;
+        throw new Error("Parâmetro errado.");
+      }
       if (!order) {
         products = await connection.raw(`SELECT * FROM labecommerce_products
         WHERE name like "%${nameSearch}%"

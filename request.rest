@@ -1,0 +1,56 @@
+GET https://labecommerce-bianca-paccola.onrender.com/products
+content-type: application/json
+
+###
+
+GET https://labecommerce-bianca-paccola.onrender.com/users/1670179225442/purchases
+content-type: application/json
+
+###
+
+GET https://labecommerce-bianca-paccola.onrender.com/users
+content-type: application/json
+
+###
+
+GET https://labecommerce-bianca-paccola.onrender.com/products?order=asc
+content-type: application/json
+
+###
+
+GET https://labecommerce-bianca-paccola.onrender.com/products?search=pente
+content-type: application/json
+
+###
+
+POST https://labecommerce-bianca-paccola.onrender.com/products
+content-type: application/json
+
+{
+    "name": "Livro: O Caibalion",
+    "price": 19.90,
+    "image": "https://m.media-amazon.com/images/I/41SB1ge2iwL._SY344_BO1,204,203,200_QL70_ML2_.jpg"
+}
+
+###
+
+POST https://labecommerce-bianca-paccola.onrender.com/purchases
+content-type: application/json
+
+{
+    "userId": "1670203440391",
+    "productId": "1670203341954",
+    "quantity": 1
+}
+
+###
+
+POST https://labecommerce-bianca-paccola.onrender.com/users
+content-type: application/json
+
+{
+    "name": "Carlos Alberto",
+    "email": "carlos@email.com",
+    "password": "87654321",
+    "passwordConfirm": "87654321"
+}
